@@ -34,8 +34,8 @@ The first for loop inside the while loop will iterate for |V| because it is sear
 dist to find the next smallest distance. Since this for loop is nested in the while loop,
 which also iterates for |V|, we get $|V|^2$. The last for loop is trying to find any edges
 connecting to neighboring nodes to see if it provides a shorter path to that node, which will
-iterate for number of edges or |E| as it is checking the neighboring edges of each node. The if
+iterate for number of edges or |E| as it is checking the edges of each node. The if
 statement checks and variable initializations are constant time and can be dropped for the
 rest of the calculations. Now putting this all together we get $|V| + |V|^2 + |E|$, which
-we can simply to $|V|^2 + |E|$ as |V| is a lower order term. The $\Theta$ complexity for
-this implementation would be $\Theta(|V|^2 + |E|)$.
+we can simplify to $|V|^2 + |E|$ as |V| is a lower order term and can be dropped. The $\Theta$ 
+complexity for this implementation would be $\Theta(|V|^2 + |E|)$.
