@@ -39,5 +39,6 @@ leads the second for loop inside the while loop to run for $|V|^2$ (while loop i
 for |V| and for loop iterates over |V|, and it is nested to achieve $|V|^2$). The if
 statement checks and variable initializations are constant time and can be dropped for the
 rest of the calculations. Now putting this all together we get $|V| + |V|^2 + |V|^2$, which
-equals $|V| + 2|V|^2$. We can simplify this to $|V|^2$ as |V| is a lower order term and 
-can be dropped. The $\Theta$ complexity for this implementation would be $\Theta(|V|^2)$.
+equals $|V| + 2|V|^2$. We can simplify this to $|V|^2$ as |V| is a lower order term and 2 is
+a constant, so they can be dropped. Therefore, the $\Theta$ complexity for this implementation
+would be $\Theta(|V|^2)$.
