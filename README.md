@@ -32,10 +32,12 @@ to set their distance's from the source node to Infinity, which takes number
 of vertices or |V| time. Then there is a while loop that has 2 for loops inside.
 The first for loop inside the while loop will iterate for |V| because it is searching
 dist to find the next smallest distance. Since this for loop is nested in the while loop,
-which also iterates for |V|, we get $|V|^2$. The last for loop is trying to find any edges
-connecting to neighboring nodes to see if it provides a shorter path to that node, which will
-iterate for number of edges or |E| as it is checking the edges of each node. The if
+which also iterates for |V|, we get $|V|^2$. The last for loop inside the while loop is
+looking at all the edges of each node to see if there is a shorter path to undecided
+neighbor nodes. Since this implementation is an adjacency matrix, iterating over edges
+leads the second for loop inside the while loop to run for $|V|^2$ (while loop iterates 
+for |V| and for loop iterates over |V|, and it is nested to achieve $|V|^2$). The if
 statement checks and variable initializations are constant time and can be dropped for the
-rest of the calculations. Now putting this all together we get $|V| + |V|^2 + |E|$, which
-we can simplify to $|V|^2 + |E|$ as |V| is a lower order term and can be dropped. The $\Theta$ 
-complexity for this implementation would be $\Theta(|V|^2 + |E|)$.
+rest of the calculations. Now putting this all together we get $|V| + |V|^2 + |V|^2$, which
+equals $|V| + 2|V|^2$. We can simplify this to $|V|^2$ as |V| is a lower order term and 
+can be dropped. The $\Theta$ complexity for this implementation would be $\Theta(|V|^2)$.
